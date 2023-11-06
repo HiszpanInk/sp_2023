@@ -16,7 +16,7 @@
                 <a href="{{ route('contact') }}" id="selected">Kontakt</a>
                 <a href="{{ route('about') }}">Informacje o stronie</a>
             </div>
-            <div>Witaj <b>Username</b></p></div>
+            <div>Witaj <b>{{ session('user') }}</b></p></div>
     </header>
     <main>
         <p>Ażeby skontaktować się w jakiejś sprawie prosimy o wypełnienie poniższego formularza</p>

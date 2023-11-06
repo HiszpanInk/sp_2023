@@ -15,6 +15,10 @@ class EnsureLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        return $next($request);
+        if($request->session()->has('user')) {
+            return $next($request);
+        } else {
+            return redirect('/login');
+        }
     }
 }

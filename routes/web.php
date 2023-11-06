@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-
+use App\Http\Middleware\EnsureLogin;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,18 +14,19 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name("index");
-
-Route::get('/about', function () {
-    return view('informacje');
-})->name("about");
-
-Route::get('/contact', function () {
-    return view('kontakt');
-})->name("contact");
-
+Route::middleware(EnsureLogin::class)->group(function() {
+    Route::get('/', function () {
+        return view('index');
+    })->name("index");
+    
+    Route::get('/about', function () {
+        return view('informacje');
+    })->name("about");
+    
+    Route::get('/contact', function () {
+        return view('kontakt');
+    })->name("contact");
+});
 
 Route::get('/login', function () {
     return view('login');
@@ -37,3 +38,4 @@ Route::get('/register', function () {
 
 Route::post('/register', [UserController::class, 'register'])->name('register');
 Route::post('/login', [UserController::class, 'login'])->name('login');
+Route::get('/logout', [UserController::class, 'logout'])->name('logout');

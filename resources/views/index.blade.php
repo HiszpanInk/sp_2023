@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div id="headmother">
-            <p id="hibitch">Witaj <a href="#acc.html">użytkowniku</a></p>
+            <p id="hibitch">Witaj <a href="#acc.html">{{ session('user') }}</a></p>
             <h1>Sklepix Prezenty</h1>
             <div id="line"></div>
             <h3>Sklep z drobiazgami dla ludzi o specyficznym poczuciu humoru</h3>

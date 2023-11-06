@@ -30,13 +30,17 @@ class UserController extends Controller
             $user = DB::table('uzytkownicy')->where('login', $request->username)->first();
             if($user != false) {
                 if(password_verify($request->password, $user->haslo)) {
-                    session(['key' => 'value']);
-                    return redirect('/')
+                    session(['user' => $user->login]);
+                    return redirect('/');
                 }
             } 
             return view("error", ['content' => "Błędne dane logowania"]);
         } else {
             return view("error", ['content' => "Nie wypełniono wszystkich pól!"]);
         }
+    }
+    public function logout() {
+        session()->flush();
+        return redirect('/login');
     }
 }
