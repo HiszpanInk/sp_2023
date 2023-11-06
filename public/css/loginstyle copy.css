@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(0, 0, 56);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    max-width: 50%;
+    border: 3px solid black;
+    margin-top: 25%;
+    border-radius: 25px;
+}
+main > a {
+    color: rgb(0, 0, 56);
+}
+#inputs {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: right;
+}

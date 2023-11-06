@@ -1,0 +1,84 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Comic Sans MS';
+    background-color: #98B6C2;
+}
+
+.container {
+    margin-left: 30%;
+    margin-left: 30%;
+    width: 40%;
+    height: 1300px;
+}
+
+#hibitch {
+    padding: 0%;
+    float: right;
+}
+
+#hibitch a {
+    color: white;
+}
+
+#headmother {
+    height: 200px;
+    background-color: lightskyblue;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#headspawn {
+    height: 60px;
+    background-color: lightskyblue;
+    align-items: flex-end;
+}
+
+#line {
+    background-color: white;
+    width: 100%;
+    height: 1px;
+}
+
+.headling {
+    background-color: #66FFC6;
+    width: "50px";
+    padding: 5px;
+    margin: 5px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: lightskyblue;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    background-color: #66FFC6;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #000;
+    color: white;
+}
+
+#main {
+    width: 90%;
+    height: 80%;
+    background-color: white;
+    padding: 5%;
+    float: left;
+}
