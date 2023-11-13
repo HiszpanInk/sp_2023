@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Lis 06, 2023 at 08:45 AM
+-- Generation Time: Lis 13, 2023 at 10:15 AM
 -- Wersja serwera: 10.4.28-MariaDB
 -- Wersja PHP: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sp_2023`
+-- Database: `sklep_osobliwosci`
 --
 
 -- --------------------------------------------------------
@@ -43,11 +43,12 @@ CREATE TABLE `produkty` (
 INSERT INTO `produkty` (`id_produktu`, `id_tp`, `nazwa`, `opis`, `obraz`, `cena`) VALUES
 (1, 1, 'Brelok \"Diabelski Rdzeń\"', 'Teraz z prawdziwym plutonem! Porrrażające akcesorium dla najbardziej zapalonych entuzjastów!\r\n\r\nMateriały: pluton, węglik wolframu', 'dcorekeychain.jpg', 29.99),
 (2, 3, 'Neco Gangster Arc T-shirt', 'Wspaniały element garderoby hustlera, idealny do zarabiania pengi. \r\nGurenyuu~\r\n\r\nMateriały: bawełna, poliester', 'necogangsterarc.jpg', 89.99),
-(3, 4, 'Fajerwerki \"Strefa Gazy\"', 'Bateria sztucznych ogni z prawdziwym białym fosforem! \r\n\r\nNie używać jako broni, nie używać pod wpływem substancji odurzających, nie dawać dzieciom.', 'gazabombs.jpg', 149.99),
+(3, 4, 'Fajerwerki \"USS Liberty\"', 'Bateria sztucznych ogni z prawdziwym białym fosforem! \r\n\r\nNie używać jako broni, nie używać pod wpływem substancji odurzających, nie dawać dzieciom.', 'ussbombs.jpg', 149.99),
 (4, 3, 'Sneaker Mike R Max (pojedynczy, nieznacznie większy)', 'Idealny dla brzuchonogów! Zdominuj boisko do kosza przy pomocy tych [[[ORYGINALNYCH TRAMPEK]]]', 'mikermax.jpg', 109.99),
 (5, 4, 'Benzyna o smaku morwy białej (0,5L)', 'Nie wiem czemu ktoś miałby to pić no ale hej, pół litra w przystępnej cenie! Cóż za okazja!', 'gasoline.jpg', 15.99),
 (6, 1, 'Przycisk do papieru \"Trójkąt Penrose\'a\"', 'Trójkąt o nieprawdopodobnej geometrii! Teraz wyszedł ze sfery myślokształtu i leży na twoim biurku...\r\nNie, to nie chwyt reklamowy. NAPRAWDĘ LEŻY NA TWOIM BIURKU NA TWOIM BIURKU NA TWOIM BIURKU UCIEKAJ UCIEKAJ UCIEKAJ\r\n\r\nMateriał: Czarny kamień z 𒈔𒂂𒄱', 'penrosepaperweight.jpg', 39.99),
-(7, 4, 'Garnax', 'Superpotężny, kuloodporny garnek! Czego chcieć więcej!\r\n\r\nUwaga: Nie przewodzi prądu ani ciepła.\r\n\r\nMateriał: Niedozdobywalium', 'heatproof.jpg', 99.99);
+(7, 4, 'Garnax', 'Superpotężny, kuloodporny garnek! Czego chcieć więcej!\r\n\r\nUwaga: Nie przewodzi prądu ani ciepła.\r\n\r\nMateriał: Niedozdobywalium', 'heatproof.jpg', 99.99),
+(8, 1, 'Beczka Glut Czarnobylit! ', 'Ciepły slime w stylizowanym na beczkę pojemniku. Super zabawa dla najmłodszych!\r\n\r\nMateriały: przeważnie korium', 'elephantslime.jpg', 5.99);
 
 -- --------------------------------------------------------
 
@@ -82,13 +83,6 @@ CREATE TABLE `uzytkownicy` (
   `email` varchar(255) NOT NULL,
   `haslo` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `uzytkownicy`
---
-
-INSERT INTO `uzytkownicy` (`id`, `login`, `email`, `haslo`) VALUES
-(1, 'lorem', 'ipsum', '$2y$10$Eq5tNf8yfXJQG/xhUlJgM.OsrGwMMfgqEOTtjeJdnZF1v7PvDnZWO');
 
 -- --------------------------------------------------------
 
@@ -158,7 +152,7 @@ ALTER TABLE `zamowieniewp`
 -- AUTO_INCREMENT for table `produkty`
 --
 ALTER TABLE `produkty`
-  MODIFY `id_produktu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_produktu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `typy_produktow`
@@ -170,7 +164,7 @@ ALTER TABLE `typy_produktow`
 -- AUTO_INCREMENT for table `uzytkownicy`
 --
 ALTER TABLE `uzytkownicy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `zamowienia`
