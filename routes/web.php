@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductsDisplayController;
 use App\Http\Middleware\EnsureLogin;
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,9 @@ Route::middleware(EnsureLogin::class)->group(function() {
     Route::get('/', function () {
         return view('index');
     })->name("index");
+
+    Route::get('/products', [ProductsDisplayController::class, 'DisplayProducts'])->name("products");
+    Route::get('/product/{id}', [ProductsDisplayController::class, 'DisplayProduct'])->name("product");
     
     Route::get('/about', function () {
         return view('informacje');

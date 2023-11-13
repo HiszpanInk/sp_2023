@@ -24,8 +24,9 @@
             </ul>
         </div>
         <div id="main">
-            Witamy na sklepie Sklepix Prezenty!<br><br>
-            Zapraszamy do sprawdzenia naszej bogatej oferty prezentów
+            <table>
+                {!! $zawartosc_tabeli !!}
+            </table>
         </div>
     </div>
 </body>

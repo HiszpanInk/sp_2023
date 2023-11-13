@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Lis 06, 2023 at 08:45 AM
+-- Generation Time: Lis 13, 2023 at 10:30 AM
 -- Wersja serwera: 10.4.28-MariaDB
 -- Wersja PHP: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sp_2023`
+-- Database: `laravel`
 --
 
 -- --------------------------------------------------------
@@ -43,7 +43,7 @@ CREATE TABLE `produkty` (
 INSERT INTO `produkty` (`id_produktu`, `id_tp`, `nazwa`, `opis`, `obraz`, `cena`) VALUES
 (1, 1, 'Brelok \"Diabelski Rdzeń\"', 'Teraz z prawdziwym plutonem! Porrrażające akcesorium dla najbardziej zapalonych entuzjastów!\r\n\r\nMateriały: pluton, węglik wolframu', 'dcorekeychain.jpg', 29.99),
 (2, 3, 'Neco Gangster Arc T-shirt', 'Wspaniały element garderoby hustlera, idealny do zarabiania pengi. \r\nGurenyuu~\r\n\r\nMateriały: bawełna, poliester', 'necogangsterarc.jpg', 89.99),
-(3, 4, 'Fajerwerki \"Strefa Gazy\"', 'Bateria sztucznych ogni z prawdziwym białym fosforem! \r\n\r\nNie używać jako broni, nie używać pod wpływem substancji odurzających, nie dawać dzieciom.', 'gazabombs.jpg', 149.99),
+(3, 4, 'Fajerwerki \"Strefa Gazy\"', 'Bateria sztucznych ogni z prawdziwym białym fosforem! \r\n\r\nNie używać jako broni, nie używać pod wpływem substancji odurzających, nie dawać dzieciom.', 'ussbombs.jpg', 149.99),
 (4, 3, 'Sneaker Mike R Max (pojedynczy, nieznacznie większy)', 'Idealny dla brzuchonogów! Zdominuj boisko do kosza przy pomocy tych [[[ORYGINALNYCH TRAMPEK]]]', 'mikermax.jpg', 109.99),
 (5, 4, 'Benzyna o smaku morwy białej (0,5L)', 'Nie wiem czemu ktoś miałby to pić no ale hej, pół litra w przystępnej cenie! Cóż za okazja!', 'gasoline.jpg', 15.99),
 (6, 1, 'Przycisk do papieru \"Trójkąt Penrose\'a\"', 'Trójkąt o nieprawdopodobnej geometrii! Teraz wyszedł ze sfery myślokształtu i leży na twoim biurku...\r\nNie, to nie chwyt reklamowy. NAPRAWDĘ LEŻY NA TWOIM BIURKU NA TWOIM BIURKU NA TWOIM BIURKU UCIEKAJ UCIEKAJ UCIEKAJ\r\n\r\nMateriał: Czarny kamień z 𒈔𒂂𒄱', 'penrosepaperweight.jpg', 39.99),

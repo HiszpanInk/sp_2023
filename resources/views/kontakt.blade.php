@@ -12,7 +12,7 @@
         <div><h2>Lorem ipsum</h2><br></div>
             <div id="pages">
                 <a href="{{ route('index') }}">Strona główna</a>
-                <a href="#">Produkty</a>
+                <a href="{{ route('products') }}">Produkty</a>
                 <a href="{{ route('contact') }}" id="selected">Kontakt</a>
                 <a href="{{ route('about') }}">Informacje o stronie</a>
             </div>

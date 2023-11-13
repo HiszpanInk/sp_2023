@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('/css/style_k.css') }}"/>
-    <title>Sklepix Prezenty</title>
+    <title>{{ $nazwa }}</title>
 </head>
 <body>
     <div class="container">
@@ -24,8 +24,17 @@
             </ul>
         </div>
         <div id="main">
-            Witamy na sklepie Sklepix Prezenty!<br><br>
-            Zapraszamy do sprawdzenia naszej bogatej oferty prezentów
+            <table>
+                <tr>
+                    <td><h2>{{ $nazwa }}</h2></td>
+                    <td rowspan=2><img src="{{ asset('/images/' . $obraz) }}" alt="{{ $nazwa }}" ></td>
+                </tr>
+                <tr><td>{{ $cena }} PLN</td></tr>
+
+            <tr><td colspan=2><h5>Opis</h5>
+            <p>{{ $opis }}</p></td></tr>
+            <tr><td colspan=2>Typ produktu: {{ $kategoria }}</td></tr>
+            <table>
         </div>
     </div>
 </body>

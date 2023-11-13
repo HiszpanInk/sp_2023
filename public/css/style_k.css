@@ -60,6 +60,8 @@ li {
     float: right;
 }
 
+
+
 li a {
     display: block;
     background-color: #66FFC6;
@@ -81,4 +83,20 @@ li a:hover {
     background-color: white;
     padding: 5%;
     float: left;
+}
+td {
+    text-align: center;
+}
+
+td a {
+    text-decoration: none;
+    color: black;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
 }
