@@ -24,12 +24,29 @@
             </ul>
         </div>
         <div id="main">
-           <table>
-            <!--do ewentualnego dorobienia - usuwanie produktów z koszyka -->
+        <h3>Zawartość zamówienia</h3>
+        <table>
                 <tr><th>Produkt</th><th>Ilość</th></tr>
                 {!! $zawartosc_tabeli !!}
+                
             </table><br>
-            <a href="{{ route('finalise_order') }}">Złóż zamówienie</a>
+            <b>Kwota do zapłacenia: {{ $cena }} PLN</b><br>
+            <br><form action="" method="POST">
+            <label for="payment">Forma płatności:</label>
+                
+            <select name="payment" id="payment-select">
+                <option value="cash">Gotówka przy odbiorze</option>
+                <option value="transfer">Przelew</option>
+                </select>
+                <br>
+                <label for="delivery">Forma dostawy:</label>
+                <select name="delivery" id="delivery-select">
+                <option value="fedex">Kurier Fedex</option>
+                <option value="InPost">InPost kurier</option>
+                </select>
+                <br><br>
+                <button type="submit">Finalizuj zamówienie</button>
+            </form>
         </div>
     </div>
 </body>
