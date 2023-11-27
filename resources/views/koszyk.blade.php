@@ -5,14 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('/css/style_k.css') }}"/>
-    <title>Sklepix Prezenty</title>
+    <title>Koszyk</title>
 </head>
 <body>
     <div class="container">
         <div id="headmother">
-            <p id="hibitch">Witaj <a href="{{ route('user') }}">{{ session('user') }}</a>
-            <br><a href="{{ route('basket') }}">Koszyk [{{ count(session('basket'))}} produktów]</a>
-            </p>
+            <p id="hibitch">Witaj <a href="{{ route('user') }}">{{ session('user') }}</a></p>
             <h1>Sklepix Prezenty</h1>
             <div id="line"></div>
             <h3>Sklep z drobiazgami dla ludzi o specyficznym poczuciu humoru</h3>
@@ -26,7 +24,8 @@
             </ul>
         </div>
         <div id="main">
-            <table>
+           <table>
+                <tr><th>Produkt</th><th>Ilość</th></tr>
                 {!! $zawartosc_tabeli !!}
             </table>
         </div>

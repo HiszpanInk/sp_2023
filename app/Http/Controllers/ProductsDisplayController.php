@@ -33,6 +33,6 @@ class ProductsDisplayController extends Controller
     public function DisplayProduct(string $id) {
         $produkt = DB::table('produkty')->where('id_produktu', $id)->first();
         $nazwakategorii = DB::table('typy_produktow')->where('id_typu_produktu', $produkt->id_tp)->first()->typ_produktu;
-        return view("produkt", ['nazwa' => $produkt->nazwa, 'opis' => $produkt->opis, 'obraz' => $produkt->obraz, 'cena' => $produkt->cena, 'kategoria' => $nazwakategorii]);
+        return view("produkt", ['id_produktu' => $produkt->id_produktu, 'nazwa' => $produkt->nazwa, 'opis' => $produkt->opis, 'obraz' => $produkt->obraz, 'cena' => $produkt->cena, 'kategoria' => $nazwakategorii]);
     }
 }

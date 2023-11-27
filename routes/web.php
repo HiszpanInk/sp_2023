@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductsDisplayController;
+use App\Http\Controllers\BasketController;
 use App\Http\Middleware\EnsureLogin;
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,10 @@ Route::middleware(EnsureLogin::class)->group(function() {
 
     Route::get('/products', [ProductsDisplayController::class, 'DisplayProducts'])->name("products");
     Route::get('/product/{id}', [ProductsDisplayController::class, 'DisplayProduct'])->name("product");
+    Route::get('/product/{id}/add_to_basket', [BasketController::class, 'AddToBasket'])->name("add_to_basket");
     
+    Route::get('/basket', [BasketController::class, 'ShowBasket'])->name("basket");
+
     Route::get('/about', function () {
         return view('informacje');
     })->name("about");

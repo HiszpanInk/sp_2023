@@ -31,8 +31,10 @@
                 </tr>
                 <tr><td>{{ $cena }} PLN
                 <br><br>
-                <a><button><h3>Dodaj do koszyka</h3></button></a>
-
+                <form action='{{ route("add_to_basket", ["id" => $id_produktu]) }}' method="GET">
+                    <label for="ammount">Ilość: </label><input type="number" name="ammount" min=1 value=1>
+                    <a><button><h3>Dodaj do koszyka</h3></button></a>
+                </form>
                 </td></tr>
 
             <tr><td colspan=2><h5>Opis</h5>

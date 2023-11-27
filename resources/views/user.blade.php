@@ -24,6 +24,7 @@
         <h4>{{ session('user') }}</h4>
         
         <h3>Opcje</h3>
+        <a href="{{ route('basket') }}">Przejdź do koszyka</a>
         <a href="{{ route('change_password_page') }}">Zmień hasło</a>
         <a href="{{ route('delete_account_page') }}">Usuń konto</a>
         <a href="{{ route('logout') }}">Wyloguj</a>
