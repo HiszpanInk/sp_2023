@@ -14,9 +14,9 @@
                 <a href="{{ route('index') }}">Strona główna</a>
                 <a href="{{ route('products') }}">Produkty</a>
                 <a href="{{ route('contact') }}">Kontakt</a>
-                <a href="" id="selected">Informacje o stronie</a>
+                <a href="{{ route('about') }}" id="selected">Informacje o stronie</a>
             </div>
-            <div>Witaj <b>{{ session('user') }}</b></p></div>
+            <div>Witaj <a href="{{ route('user') }}"><b>{{ session('user') }}</b></a></p></div>
     </header>
     <main>
         <h3>Strona</h3>

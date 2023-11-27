@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div id="headmother">
-            <p id="hibitch">Witaj <a href="#acc.html">{{ session('user') }}</a></p>
+            <p id="hibitch">Witaj <a href="{{ route('user') }}">{{ session('user') }}</a></p>
             <h1>Sklepix Prezenty</h1>
             <div id="line"></div>
             <h3>Sklep z drobiazgami dla ludzi o specyficznym poczuciu humoru</h3>
@@ -29,7 +29,11 @@
                     <td><h2>{{ $nazwa }}</h2></td>
                     <td rowspan=2><img src="{{ asset('/images/' . $obraz) }}" alt="{{ $nazwa }}" ></td>
                 </tr>
-                <tr><td>{{ $cena }} PLN</td></tr>
+                <tr><td>{{ $cena }} PLN
+                <br><br>
+                <a><button><h3>Dodaj do koszyka</h3></button></a>
+
+                </td></tr>
 
             <tr><td colspan=2><h5>Opis</h5>
             <p>{{ $opis }}</p></td></tr>

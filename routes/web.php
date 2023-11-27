@@ -30,6 +30,18 @@ Route::middleware(EnsureLogin::class)->group(function() {
     Route::get('/contact', function () {
         return view('kontakt');
     })->name("contact");
+
+    Route::get('/delete_account_page', [UserController::class, 'delete_account_page'])->name("delete_account_page");
+    Route::get('/delete_account', [UserController::class, 'delete_account'])->name("delete_account");
+
+    Route::get('/change_password_page', function () {
+        return view('change_password');
+    })->name("change_password_page");
+    Route::POST('/change_password', [UserController::class, 'change_password'])->name("change_password");
+
+    Route::get('/user', function () {
+        return view('user');
+    })->name("user");
 });
 
 Route::get('/login', function () {

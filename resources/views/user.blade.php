@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
-    <title>Kontakt</title>
+    <title>Informacje o stronie</title>
 </head>
 <body>
     <header class="flex-container">
@@ -13,18 +13,21 @@
             <div id="pages">
                 <a href="{{ route('index') }}">Strona główna</a>
                 <a href="{{ route('products') }}">Produkty</a>
-                <a href="{{ route('contact') }}" id="selected">Kontakt</a>
+                <a href="{{ route('contact') }}">Kontakt</a>
                 <a href="{{ route('about') }}">Informacje o stronie</a>
             </div>
-            <div>Witaj <a href="{{ route('user') }}"><b>{{ session('user') }}</b></a></p></div>
+            <div>Witaj <a href="" id="selected"><b>{{ session('user') }}</b></a></p></div>
     </header>
     <main>
-        <p>Ażeby skontaktować się w jakiejś sprawie prosimy o wypełnienie poniższego formularza</p>
-        <form action="#" method="POST">
-            <label for="content">Treść: </label><br>
-            <textarea name="content"></textarea>
-            <br><button type="submit">Wyślij</button>
-        </form>
+        <h3>Panel kontrolny użytkownika</h3>
+        Nazwa zalogowanego użytkownika:
+        <h4>{{ session('user') }}</h4>
+        
+        <h3>Opcje</h3>
+        <a href="{{ route('change_password_page') }}">Zmień hasło</a>
+        <a href="{{ route('delete_account_page') }}">Usuń konto</a>
+        <a href="{{ route('logout') }}">Wyloguj</a>
+        <br>
     </main>
     <hr>
     <footer>
