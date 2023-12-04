@@ -43,7 +43,7 @@
                 <label for="delivery">Forma dostawy:</label>
                 <select name="delivery" id="delivery-select">
                 <option value="fedex">Kurier Fedex</option>
-                <option value="InPost">InPost kurier</option>
+                <option value="inpost">InPost kurier</option>
                 </select>
                 <br><br>
                 <button type="submit">Finalizuj zamówienie</button>

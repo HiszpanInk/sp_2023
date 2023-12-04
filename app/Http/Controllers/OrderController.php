@@ -57,6 +57,6 @@ class OrderController extends Controller
             $kwota += $record->ilosc_produktow * ($produkty_tabela[$record->id_produktow - 1])->cena;
         }
 
-        return view('zamowienie', ['id' => $id, 'status' => $zamowienie->status, 'kwota' => number_format($kwota, 2), 'produkty' => $produkty]);
+        return view('zamowienie', ['id' => $id, 'status' => $zamowienie->status, 'dostawa' => $zamowienie->dostawa, 'platnosc' => $zamowienie->platnosc, 'kwota' => number_format($kwota, 2), 'produkty' => $produkty]);
     }
 }

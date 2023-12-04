@@ -32,11 +32,31 @@
             @endswitch
         </td></tr>
         <tr><td>Zamawiający</td><td>{{ session('user')}}</td></tr>
+        <tr><td>Sposób dostawy</td><td>
+            @switch($dostawa)
+                @case('fedex')
+                    Kurier Fedex
+                    @break
+                @case('inpost')
+                    Paczkomaty InPost
+                    @break
+            @endswitch
+        </td></tr>
+        <tr><td>Sposób płatności</td><td>
+            @switch($platnosc)
+                @case('gotowka')
+                    Gotówka
+                    @break
+                @case('przelew')
+                    Przelew
+                    @break
+            @endswitch
+        </td></tr>
         <tr><td colspan=2>Zawartość zamówienia</td></tr>
         <tr><th>Produkt</th><th>Ilość</th></tr>
         @foreach($produkty as $produkt)
             <tr>
-                <td><a href='{{ $produkt["id"] }}'>{{ $produkt['nazwa'] }}</a>
+                <td><a href='{{ route("product", ["id" => $produkt["id"]]) }}'>{{ $produkt['nazwa'] }}</a>
                 <td>{{ $produkt['ilosc'] }}</td>
             </tr>
         @endforeach
