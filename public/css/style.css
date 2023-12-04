@@ -21,3 +21,7 @@ a:hover {
 #selected {
     text-decoration: underline;
 }
+table, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+}

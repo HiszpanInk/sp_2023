@@ -31,9 +31,10 @@
                 
             </table><br>
             <b>Kwota do zapłacenia: {{ $cena }} PLN</b><br>
-            <br><form action="" method="POST">
+            <br>
+            <form action="{{ route('create_order') }}" method="POST">
             <label for="payment">Forma płatności:</label>
-                
+                @csrf
             <select name="payment" id="payment-select">
                 <option value="cash">Gotówka przy odbiorze</option>
                 <option value="transfer">Przelew</option>

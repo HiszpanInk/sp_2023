@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
-    <title>Informacje o stronie</title>
+    <title>Twoje zamowienia</title>
 </head>
 <body>
     <header class="flex-container">
@@ -14,22 +14,26 @@
                 <a href="{{ route('index') }}">Strona główna</a>
                 <a href="{{ route('products') }}">Produkty</a>
                 <a href="{{ route('contact') }}">Kontakt</a>
-                <a href="{{ route('about') }}">Informacje o stronie</a>
+                <a href="{{ route('about') }}" id="selected">Informacje o stronie</a>
             </div>
-            <div>Witaj <a href="" id="selected"><b>{{ session('user') }}</b></a></p></div>
+            <div>Witaj <a href="{{ route('user') }}"><b>{{ session('user') }}</b></a></p></div>
     </header>
-    <main>
-        <h3>Panel kontrolny użytkownika</h3>
-        Nazwa zalogowanego użytkownika:
-        <h4>{{ session('user') }}</h4>
-        
-        <h3>Opcje</h3>
-        <a href="{{ route('basket') }}">Przejdź do koszyka</a>
-        <a href="{{ route('show_orders') }}">Przejdź do twoich zamówień</a>
-        <a href="{{ route('change_password_page') }}">Zmień hasło</a>
-        <a href="{{ route('delete_account_page') }}">Usuń konto</a>
-        <a href="{{ route('logout') }}">Wyloguj</a>
-        <br>
+    <main><br>
+    <ul>
+        @foreach ($zamowienia as $zamowienie)
+            <li><a href='{{ route("view_order", ["id" => $zamowienie["id"]]) }}'>{{ $zamowienie['tekst'] }}</a>
+            <br>
+            @switch($zamowienie['status'])
+                @case(1)
+                    Oczekuje na płatność
+                    @break
+                @case(2)
+                    Kompletowanie zamówienia
+                    @break
+            @endswitch
+        </li>
+        @endforeach
+</ul>
     </main>
     <hr>
     <footer>

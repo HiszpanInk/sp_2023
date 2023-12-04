@@ -29,7 +29,9 @@ Route::middleware(EnsureLogin::class)->group(function() {
     Route::get('/basket', [BasketController::class, 'ShowBasket'])->name("basket");
 
     Route::get('/finalise_order', [OrderController::class, 'FinaliseOrder'])->name("finalise_order");
-
+    Route::POST('/create_order', [OrderController::class, 'CreateOrder'])->name("create_order");
+    Route::get('/orders', [OrderController::class, 'ShowOrders'])->name("show_orders");
+    Route::get('/order/{id}', [OrderController::class, 'ViewOrder'])->name("view_order");
 
 
     Route::get('/about', function () {
